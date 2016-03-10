@@ -31,6 +31,6 @@ var obj = {
   }
 }
 
-forOf(obj, (type, port, val) => console.log(type, port, val))
+forOf((type, port, val) => console.log(type, port, val), obj)
 
 ```

@@ -1,15 +1,12 @@
-module.exports = function forOf () {
-  var args = Array.prototype.slice.call(arguments)
-  var fn = args.pop()
+module.exports = function forOf (fn, obj) {
   var argLength = fn.length - 1
-  var obj = args.pop()
-
-  if (typeof obj !== 'object') {
-    throw Error('last argument must be an object')
-  }
 
   if (typeof fn !== 'function') {
     throw Error('second last argument must be a function')
+  }
+
+  if (typeof obj !== 'object') {
+    throw Error('last argument must be an object')
   }
 
   function iterate (obj, fnArgs) {
