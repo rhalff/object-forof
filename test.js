@@ -2,23 +2,23 @@ var test = require('tape')
 var forOf = require('./')
 
 var obj = {
-  input: {        // --> type
-    in1:          // --> port
-      'i1',       // --> val
-                  // Calls: fn('input', 'in1', 'i1', 0)
+  input: { // --> type
+    in1: // --> port
+    'i1', // --> val
+    // Calls: fn('input', 'in1', 'i1', 0)
 
-    in2:          // --> port
-      'i2'        // --> val
-                  // Calls: fn('input', 'in1', 'i2', 1)
+    in2: // --> port
+    'i2' // --> val
+  // Calls: fn('input', 'in1', 'i2', 1)
   },
-  output: {       // --> type
-    out1:         // --> port
-      'o1',       // --> val
-                  // Calls: fn('output', 'out1', 'o1', 2)
+  output: { // --> type
+    out1: // --> port
+    'o1', // --> val
+    // Calls: fn('output', 'out1', 'o1', 2)
 
-    out2:         // --> port
-      'o2'        // --> val
-                  // Calls: fn('output', 'out2', 'o2', 3)
+    out2: // --> port
+    'o2' // --> val
+  // Calls: fn('output', 'out2', 'o2', 3)
   }
 }
 
@@ -29,8 +29,8 @@ var expected = [
   ['output', 'out2', 'o2']
 ]
 
-function pushIt(res) {
-  return function(type, port, val) { res.push([type, port, val]) }
+function pushIt (res) {
+  return function (type, port, val) { res.push([type, port, val]) }
 }
 
 test('array args', function (t) {
@@ -53,4 +53,3 @@ test('dot args', function (t) {
   t.deepEqual(res, expected)
   t.end()
 })
-

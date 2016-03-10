@@ -1,4 +1,4 @@
-module.exports = function forOf() {
+module.exports = function forOf () {
   var args = Array.prototype.slice.call(arguments)
   var fn = args.pop()
   var obj = args.pop()
@@ -21,14 +21,14 @@ module.exports = function forOf() {
     throw Error('second last argument must be a function')
   }
 
-  function iterate(obj, fnArgs) {
+  function iterate (obj, fnArgs) {
     for (var key in obj) {
       var myArgs = fnArgs.slice()
       if (obj.hasOwnProperty(key)) {
         myArgs.push(key)
         if (myArgs.length < args.length) {
           iterate(obj[key], myArgs)
-        } else if(myArgs.length === args.length) {
+        } else if (myArgs.length === args.length) {
           myArgs.push(obj[key])
           fn.apply(this, myArgs)
         }
@@ -38,4 +38,3 @@ module.exports = function forOf() {
 
   iterate(obj, [])
 }
-

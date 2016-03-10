@@ -9,6 +9,7 @@
   "author": "Rob Halff",
   "license": "MIT",
   "devDependencies": {
+    "standard": "^6.0.8",
     "tape": "^4.0.0"
   },
   "repository": {
