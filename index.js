@@ -1,13 +1,14 @@
 module.exports = function forOf (fn, obj) {
   if (typeof fn !== 'function') {
-    throw TypeError('First argument must be a function')
+    throw new TypeError('First argument must be a function')
   }
 
   if (typeof obj !== 'object') {
-    throw TypeError('Second argument must be an object')
+    throw new TypeError('Second argument must be an object')
   }
 
   var argLength = fn.length - 1
+  var res = []
 
   function iterate (obj, fnArgs) {
     for (var key in obj) {
@@ -18,11 +19,16 @@ module.exports = function forOf (fn, obj) {
           iterate(obj[key], myArgs)
         } else {
           myArgs.push(obj[key])
-          fn.apply(this, myArgs)
+          var ret = fn.apply(this, myArgs)
+          if (ret !== undefined) {
+            res.push(ret)
+          }
         }
       }
     }
   }
 
   iterate(obj, [])
+
+  return res
 }

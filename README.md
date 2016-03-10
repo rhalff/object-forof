@@ -34,3 +34,26 @@ var obj = {
 forOf((type, port, val) => console.log(type, port, val), obj)
 
 ```
+
+If you return something other from the function than `undefined`
+it will be added as a value within the returned array.
+
+E.g.
+```js
+forOf((type, port, val) => (
+  type === 'input' ? {type: type, val: val} : undefined
+), obj)
+
+forOf((type, port, val) => ({type: type, val: val}), obj)
+  .filter((val) => {
+  return val.type === 'input'
+})
+
+Both result in:
+
+  [
+   {type: 'input', val: '1'},
+   {type: 'input', val: '2'}
+  ]
+
+```

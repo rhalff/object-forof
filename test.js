@@ -29,27 +29,55 @@ var expected = [
   ['output', 'out2', 'o2']
 ]
 
+var filtered = [
+  {type: 'input', val: 'i1'},
+  {type: 'input', val: 'i2'}
+]
+
 function pushIt (res) {
   return function (type, port, val) { res.push([type, port, val]) }
 }
 
-test('array args', function (t) {
+function pushItReturn (res) {
+  return function (type, port, val) {
+    var ret = [type, port, val];
+    res.push(ret)
+    return ret;
+  }
+}
+
+test('Should work', function (t) {
   var res = []
-  forOf(pushIt(res), obj)
+  var ret = forOf(pushIt(res), obj)
   t.deepEqual(res, expected)
+  t.deepEqual(ret, [])
   t.end()
 })
 
-test('arguments args', function (t) {
+test('Should return array of values', function (t) {
   var res = []
-  forOf(pushIt(res), obj)
+  var ret = forOf(pushItReturn(res), obj)
   t.deepEqual(res, expected)
+  t.deepEqual(ret, expected)
   t.end()
 })
 
-test('dot args', function (t) {
+test('undefined return is not included', function (t) {
   var res = []
-  forOf(pushIt(res), obj)
-  t.deepEqual(res, expected)
+  var ret = forOf((type, port, val) => (
+    type === 'input' ? {type: type, val: val} : undefined
+  ), obj)
+  t.deepEqual(ret, filtered)
   t.end()
 })
+
+test('filter fun', function (t) {
+  var ret = forOf((type, port, val) => ({type: type, val: val}), obj)
+    .filter((val) => {
+    return val.type === 'input'
+  })
+  t.deepEqual(ret, filtered)
+  t.end()
+})
+
+
