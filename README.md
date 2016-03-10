@@ -31,12 +31,6 @@ var obj = {
   }
 }
 
-// as array
-forOf(['type', 'port'], obj, (type, port, val) => console.log(type, port, val))
+forOf(obj, (type, port, val) => console.log(type, port, val))
 
-// as arguments
-forOf('type', 'port', obj, (type, port, val) => console.log(type, port, val))
-
-// with dot notation
-forOf('type.port', obj, (type, port, val) => console.log(type, port, val))
 ```

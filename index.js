@@ -1,17 +1,9 @@
 module.exports = function forOf () {
   var args = Array.prototype.slice.call(arguments)
   var fn = args.pop()
+  var argLength = fn.length - 1
   var obj = args.pop()
-  args = Array.isArray(args[0]) ? args[0] : args
 
-  // support dot notation
-  if (args[0].indexOf('.') >= 0) {
-    if (args.length === 1) {
-      args = args[0].split('.')
-    } else {
-      throw Error('dot notation mode expects only 3 arguments (path, fn, obj)')
-    }
-  }
 
   if (typeof obj !== 'object') {
     throw Error('last argument must be an object')
@@ -26,9 +18,9 @@ module.exports = function forOf () {
       var myArgs = fnArgs.slice()
       if (obj.hasOwnProperty(key)) {
         myArgs.push(key)
-        if (myArgs.length < args.length) {
+        if (myArgs.length < argLength) {
           iterate(obj[key], myArgs)
-        } else if (myArgs.length === args.length) {
+        } else {
           myArgs.push(obj[key])
           fn.apply(this, myArgs)
         }

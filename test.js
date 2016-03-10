@@ -35,21 +35,21 @@ function pushIt (res) {
 
 test('array args', function (t) {
   var res = []
-  forOf(['type', 'port'], obj, pushIt(res))
+  forOf(obj, pushIt(res))
   t.deepEqual(res, expected)
   t.end()
 })
 
 test('arguments args', function (t) {
   var res = []
-  forOf('type', 'port', obj, pushIt(res))
+  forOf(obj, pushIt(res))
   t.deepEqual(res, expected)
   t.end()
 })
 
 test('dot args', function (t) {
   var res = []
-  forOf('type.port', obj, pushIt(res))
+  forOf(obj, pushIt(res))
   t.deepEqual(res, expected)
   t.end()
 })
