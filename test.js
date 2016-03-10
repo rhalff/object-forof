@@ -62,22 +62,23 @@ test('Should return array of values', function (t) {
   t.end()
 })
 
-test('undefined return is not included', function (t) {
-  var res = []
-  var ret = forOf((type, port, val) => (
-    type === 'input' ? {type: type, val: val} : undefined
-  ), obj)
-  t.deepEqual(ret, filtered)
-  t.end()
-})
-
-test('filter fun', function (t) {
-  var ret = forOf((type, port, val) => ({type: type, val: val}), obj)
-    .filter((val) => {
-    return val.type === 'input'
+if (typeof Map === 'function') {
+  test('undefined return is not included', function (t) {
+    var res = []
+    var ret = forOf((type, port, val) => (
+      type === 'input' ? {type: type, val: val} : undefined
+    ), obj)
+    t.deepEqual(ret, filtered)
+    t.end()
   })
-  t.deepEqual(ret, filtered)
-  t.end()
-})
 
+  test('filter fun', function (t) {
+    var ret = forOf((type, port, val) => ({type: type, val: val}), obj)
+      .filter((val) => {
+      return val.type === 'input'
+    })
+    t.deepEqual(ret, filtered)
+    t.end()
+  })
+}
 
