@@ -44,14 +44,17 @@ E.g.
 forOf((type, port, val) => (
   type === 'input' ? {type: type, val: val} : undefined
 ), obj)
+```
 
+```js
 forOf((type, port, val) => ({type: type, val: val}), obj)
   .filter((val) => {
   return val.type === 'input'
 })
+```
 
 Both result in:
-
+```js
   [
    {type: 'input', val: '1'},
    {type: 'input', val: '2'}
