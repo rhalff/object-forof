@@ -1,8 +1,9 @@
+[![NPM](https://nodei.co/npm/object-forof.png)](https://nodei.co/npm/object-forof/)
+[![Build Status](https://travis-ci.org/rhalff/object-forof.png)](https://travis-ci.org/rhalff/object-forof)
+
 # Object forof
 
 Simple object iterator
-
-[![NPM](https://nodei.co/npm/object-forof.png)](https://nodei.co/npm/object-forof/)
 
 ### example
 
