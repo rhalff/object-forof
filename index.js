@@ -4,7 +4,6 @@ module.exports = function forOf () {
   var argLength = fn.length - 1
   var obj = args.pop()
 
-
   if (typeof obj !== 'object') {
     throw Error('last argument must be an object')
   }
