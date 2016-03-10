@@ -1,0 +1,22 @@
+{
+  "name": "object-forof",
+  "version": "0.1.0",
+  "description": "Simple object iteration",
+  "main": "index.js",
+  "scripts": {
+    "test": "node test.js"
+  },
+  "author": "Rob Halff",
+  "license": "MIT",
+  "devDependencies": {
+    "tape": "^4.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rhalff/object-forof.git"
+  },
+  "bugs": {
+    "url": "https://github.com/rhalff/object-forof/issues"
+  },
+  "homepage": "https://github.com/rhalff/object-forof"
+}
