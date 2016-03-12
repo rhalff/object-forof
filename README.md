@@ -1,13 +1,13 @@
 [![NPM](https://nodei.co/npm/object-forof.png)](https://nodei.co/npm/object-forof/)
 [![Build Status](https://travis-ci.org/rhalff/object-forof.png)](https://travis-ci.org/rhalff/object-forof)
 
-# Object forof
+# Object forOf
 
 Simple object iterator
 
 ### example
 
-```js
+```javascript
 var forOf = require('object-forof')
 
                   // Explanation:
@@ -34,7 +34,7 @@ var obj = {
 
 ```
 
-Given the above example you could use Object.keys like this:
+Given the above example you could use `Object.keys` like this:
 ```
 Object.keys(obj).forEach((type) => {
   Object.keys(obj[type]).forEach((port) => {
@@ -44,7 +44,7 @@ Object.keys(obj).forEach((type) => {
 })
 ```
 
-Or a for in loop
+Or a `for in` loop
 ```
 for (let type in obj) {
   if (obj.hasOwnProperty(type)) {
@@ -58,7 +58,7 @@ for (let type in obj) {
 }
 ```
 
-forOf instead:
+With `forOf`:
 ```
 forOf((type, port, val) => {
   // do something with type, port, val
@@ -71,13 +71,13 @@ If you return something other from the function than `undefined`
 it will be added as a value within the returned array.
 
 E.g.
-```js
+```javascript
 forOf((type, port, val) => (
   type === 'input' ? {type: type, val: val} : undefined
 ), obj)
 ```
 
-```js
+```javascript
 forOf((type, port, val) => ({type: type, val: val}), obj)
   .filter((val) => {
   return val.type === 'input'
@@ -85,7 +85,7 @@ forOf((type, port, val) => ({type: type, val: val}), obj)
 ```
 
 Both result in:
-```js
+```javascript
   [
    {type: 'input', val: '1'},
    {type: 'input', val: '2'}
