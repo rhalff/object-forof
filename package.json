@@ -1,7 +1,7 @@
 {
   "name": "object-forof",
   "version": "1.3.2",
-  "description": "forOf object iteration —— A 'for in' & 'Object.keys forEach' alternative",
+  "description": "forOf object iteration — A 'for in'/'Object.keys forEach' alternative",
   "main": "index.js",
   "scripts": {
     "lint": "standard",
