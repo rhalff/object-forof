@@ -20,5 +20,6 @@
   "bugs": {
     "url": "https://github.com/rhalff/object-forof/issues"
   },
+  "tonicExampleFilename": "example.js",
   "homepage": "https://github.com/rhalff/object-forof"
 }
