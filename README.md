@@ -8,10 +8,10 @@ Simple object iterator
 ### example
 
 ```javascript
-var forOf = require('object-forof')
+const forOf = require('object-forof')
 
                   // Explanation:
-var obj = {
+const obj = {
   input: {        // --> type
     in1:          // --> port
       '1',        // --> val
@@ -35,7 +35,7 @@ var obj = {
 ```
 
 Given the above example you could use `Object.keys` like this:
-```
+```javascript
 Object.keys(obj).forEach((type) => {
   Object.keys(obj[type]).forEach((port) => {
     const val = obj[type][port]
@@ -45,7 +45,7 @@ Object.keys(obj).forEach((type) => {
 ```
 
 Or a `for in` loop
-```
+```javascript
 for (let type in obj) {
   if (obj.hasOwnProperty(type)) {
     for (let port in obj[type]) {
@@ -59,7 +59,7 @@ for (let type in obj) {
 ```
 
 With `forOf`:
-```
+```javascript
 forOf((type, port, val) => {
   // do something with type, port, val
 
