@@ -32,8 +32,39 @@ var obj = {
   }
 }
 
-forOf((type, port, val) => console.log(type, port, val), obj)
+```
 
+Given the above example you could use Object.keys like this:
+```
+Object.keys(obj).forEach((type) => {
+  Object.keys(obj[type]).forEach((port) => {
+    const val = obj[type][port]
+    // do something with type, port, val
+  })
+})
+```
+
+Or a for in loop
+```
+for (let type in obj) {
+  if (obj.hasOwnProperty(type)) {
+    for (let port in obj[type]) {
+      if (obj[type].hasOwnProperty(port)) {
+        const val = obj[type][port]
+        // do something with type, port, val
+      }
+    }
+  }
+}
+```
+
+forOf instead:
+```
+forOf((type, port, val) => {
+  // do something with type, port, val
+
+  // optionally return something
+}, obj)
 ```
 
 If you return something other from the function than `undefined`
