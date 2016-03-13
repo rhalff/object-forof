@@ -63,9 +63,9 @@ test('Should return array of values', function (t) {
 })
 
 test('undefined return is not included', function (t) {
-  var ret = forOf((type, port, val) => (
-  type === 'input' ? {type: type, val: val} : undefined
-  ), obj)
+  var ret = forOf((type, port, val) => {
+    return type === 'input' ? {type: type, val: val} : undefined
+  }, obj)
   t.deepEqual(ret, filtered)
   t.end()
 })
