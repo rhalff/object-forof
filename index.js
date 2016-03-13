@@ -1,3 +1,5 @@
+var opti = require('./10')
+
 module.exports = function forOf (fn, obj) {
   if (typeof fn !== 'function') {
     throw new TypeError('First argument must be a function')
@@ -28,7 +30,9 @@ module.exports = function forOf (fn, obj) {
     }
   }
 
-  iterate(obj, [])
-
-  return res
+  if (argLength.length > 10) {
+    iterate(obj, [])
+    return res
+  }
+  return opti(fn, obj, argLength)
 }
