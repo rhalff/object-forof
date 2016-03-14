@@ -1,6 +1,6 @@
 {
   "name": "object-forof",
-  "version": "1.4.0",
+  "version": "1.4.1",
   "description": "forOf object iteration — A 'for in'/'Object.keys forEach' alternative",
   "main": "index.js",
   "scripts": {
