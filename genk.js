@@ -36,6 +36,7 @@ function keys (k) {
 function gen (length) {
   var alpha = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k']
   let head = [
+    'function isObject(o) { return typeof o === \'object\'; }',
     'module.exports = function objk (fn, o0, argLength) {',
     '  var res = []'
   ]
@@ -55,7 +56,7 @@ function gen (length) {
     head.push(`${ind1}var ${k} = Object.keys(${o})`)
     head.push(`${ind1}for (var ${j} = 0; ${j} < ${k}.length; ${j}++) {`)
     head.push(`${ind1}  var ${on} = ${o}[${k}[${j}]]`)
-    head.push(`${ind1}  if (argLength > ${i+1}) {`)
+    head.push(`${ind1}  if (argLength > ${i+1} && isObject(${on})) {`)
 
     // reversed
     tail.push(`${ind1}}`)
