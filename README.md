@@ -10,11 +10,6 @@ Simple object iterator
 npm install object-forof --save
 ```
 
-### Download
-
-  * Development version: https://npmcdn.com/object-forof/dist/forOf.js
-  * Minified version: https://npmcdn.com/object-forof/dist/forOf.min.js
-
 ### example
 
 ```javascript
@@ -102,3 +97,8 @@ Both result in:
   ]
 
 ```
+
+### Download
+
+  * Development version: https://npmcdn.com/object-forof/dist/forOf.js
+  * Minified version: https://npmcdn.com/object-forof/dist/forOf.min.js
