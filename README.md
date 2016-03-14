@@ -12,8 +12,8 @@ npm install object-forof --save
 
 ### Download
 
-  * Development version: https://npmcdn.com/object-forof/dist/object-forOf.js
-  * Minified version: https://npmcdn.com/object-forof/dist/object-forOf.min.js
+  * Development version: https://npmcdn.com/object-forof/dist/forOf.js
+  * Minified version: https://npmcdn.com/object-forof/dist/forOf.min.js
 
 ### example
 
