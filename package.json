@@ -12,6 +12,8 @@
   "author": "Rob Halff",
   "license": "MIT",
   "devDependencies": {
+    "faker": "^3.0.1",
+    "performance-now": "^0.2.0",
     "standard": "^6.0.8",
     "tape": "^4.0.0"
   },
