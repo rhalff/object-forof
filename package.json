@@ -7,7 +7,11 @@
     "lint": "standard",
     "test": "node test.js",
     "gen": "node genk.js",
-    "dist": "browserify -s forOf index.js > dist/forOf.js && uglify -s dist/forOf.js -o dist/forOf.min.js"
+    "dist": "browserify -s forOf index.js > dist/forOf.js && uglify -s dist/forOf.js -o dist/forOf.min.js",
+    "bench:data": "node bench/generate.js > bench/data/bench_data.json",
+    "bench": "node bench/benchmark > bench/test.dat",
+    "bench:plot": "bench/plot.sh | convert - -trim bench/graph.png",
+    "bench:graph": "npm run bench:data && npm run bench && npm run bench:plot"
   },
   "author": "Rob Halff",
   "license": "MIT",

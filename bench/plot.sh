@@ -15,7 +15,7 @@ set grid
 
 set style data linespoints
 
-plot "test.dat" using 1:2 title "forIn", \
+plot "bench/test.dat" using 1:2 title "forIn", \
 ""using 1:3 title "forEachKeys", \
 ""using 1:4 title "forOf"
 #
