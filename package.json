@@ -6,6 +6,7 @@
   "scripts": {
     "lint": "standard",
     "test": "node test.js",
+    "gen": "node genk.js",
     "dist": "browserify -s forOf index.js > dist/forOf.js && uglify -s dist/forOf.js -o dist/forOf.min.js"
   },
   "author": "Rob Halff",
