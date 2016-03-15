@@ -102,6 +102,8 @@ Both result in:
 
 Below graph gives some indication on performance.
 
+In progress....
+
 ![Benchmark Graph](/bench/graph.png?raw=true "Benchmark")
 
 
