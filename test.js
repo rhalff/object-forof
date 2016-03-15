@@ -78,3 +78,13 @@ test('filter fun', function (t) {
   t.deepEqual(ret, filtered)
   t.end()
 })
+
+test('hetrogenous (simple)', function (t) {
+  const pkg = require('./package.json')
+  const ret = forOf((pos1, pos2, pos3) => {
+    if (pos1 === 'homepage') return pos2
+    else if (pos2 === 'url') return pos3
+  }, pkg)
+  t.deepEqual(ret, [pkg.repository.url, pkg.bugs.url, pkg.homepage])
+  t.end()
+})
