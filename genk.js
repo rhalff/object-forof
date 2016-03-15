@@ -1,23 +1,26 @@
 'use strict'
 
 /*
-module.exports = function objk(fn, o0, argLength) {
+module.exports = function objk (fn, o0, argLength) {
   var res = []
-
   var k0 = Object.keys(o0)
   for (var a = 0; a < k0.length; a++) {
-    var o0 = obj[k0[a]]
-    if (argLength > 1) {
-      var k1 = Object.keys(o0)
+    var o1 = o0[k0[a]]
+    if (argLength > 1 && isObject(o1)) {
+      var k1 = Object.keys(o1)
       for (var b = 0; b < k1.length; b++) {
-        var o1 = o0[k1[b]]
-        var ret = fn (k0[a], k1[b], o1)
-        if (ret !== undefined) {
-          res.push(ret)
+        var o2 = o1[k1[b]]
+        if (argLength > 2 && isObject(o2)) {
+          throw Error('more than 2 arguments not supported')
+        } else {
+          var ret = fn (k0[a], k1[b], o2)
+          if (ret !== undefined) {
+            res.push(ret)
+          }
         }
       }
     } else {
-      var ret = fn (k0[a], o0)
+      var ret = fn (k0[a], o1)
       if (ret !== undefined) {
         res.push(ret)
       }
