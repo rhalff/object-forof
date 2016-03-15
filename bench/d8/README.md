@@ -21,6 +21,7 @@ d8 --trace-opt-verbose bat/object_keys.js
 
 Links:
 
+ - https://gist.github.com/kevincennis/0cd2138c78a07412ef21
  - https://groups.google.com/forum/#!topic/v8-users/hsUrt4I2D98
  - https://groups.google.com/forum/#!topic/v8-users/BrmJ7AQIwfc
  - https://codereview.chromium.org/1751873002/
