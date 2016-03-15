@@ -11,5 +11,3 @@ function bench_object_keys () {
 function bench_forOf () {
   return forOf(func, data)
 }
-
-
