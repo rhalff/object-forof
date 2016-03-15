@@ -1,4 +1,4 @@
-var opti = require('./10')
+var objk = require('./10')
 
 module.exports = function forOf (fn, obj) {
   if (typeof fn !== 'function') {
@@ -34,5 +34,5 @@ module.exports = function forOf (fn, obj) {
     iterate(obj, [])
     return res
   }
-  return opti(fn, obj, argLength)
+  return objk(fn, obj, argLength)
 }

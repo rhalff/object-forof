@@ -11,12 +11,13 @@
     "bench:data": "node bench/generate.js > bench/data/bench_data.json",
     "bench": "node bench/benchmark > bench/test.dat",
     "bench:plot": "bench/plot.sh | convert - -trim bench/graph.png",
-    "bench:graph": "npm run bench:data && npm run bench && npm run bench:plot"
+    "bench:graph": "npm run bench && npm run bench:plot"
   },
   "author": "Rob Halff",
   "license": "MIT",
   "devDependencies": {
     "faker": "^3.0.1",
+    "gc-profiler": "^1.3.1",
     "performance-now": "^0.2.0",
     "standard": "^6.0.8",
     "tape": "^4.0.0"

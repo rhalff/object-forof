@@ -4,12 +4,12 @@
  * Uses for in to go 2 levels deep
  */
 function for_in (fn, data) {
-  const res = []
-  for (let key in data) {
+  var res = []
+  for (var key in data) {
     if (data.hasOwnProperty(key)) {
-      for (let key2 in data[key]) {
+      for (var key2 in data[key]) {
         if (data[key].hasOwnProperty(key2)) {
-          const ret = fn(key, key2, data[key][key2])
+          var ret = fn(key, key2, data[key][key2])
           if (ret !== undefined) {
             res.push(res)
           }
@@ -26,10 +26,10 @@ function for_in (fn, data) {
  *
  */
 function object_keys (fn, data) {
-  const res = []
+  var res = []
   Object.keys(data).forEach((key) => {
     Object.keys(data[key]).forEach((key2) => {
-      const ret = fn(key, key2, data[key][key2])
+      var ret = fn(key, key2, data[key][key2])
       if (ret !== undefined) {
         res.push(ret)
       }
