@@ -98,6 +98,13 @@ Both result in:
 
 ```
 
+### Benchmark
+
+Below graph gives some indication on performance.
+
+![Benchmark Graph](/bench/graph.png?raw=true "Benchmark")
+
+
 ### Download
 
   * Development version: https://npmcdn.com/object-forof/dist/forOf.js
