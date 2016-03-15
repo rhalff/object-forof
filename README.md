@@ -100,6 +100,9 @@ Both result in:
 
 ### Benchmark
 
+Although forOf was made for it's expressiveness it must ofcourse not be slower
+than it's alternatives.
+
 Below graph gives some indication on performance.
 
 In progress....
