@@ -1,5 +1,6 @@
 node_modules
 .idea
 bench/data/*.json
-bench/v8/bat/
+bench/d8/bat/*.js
 dist/
+*.txt
