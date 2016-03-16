@@ -28,3 +28,4 @@ Links:
  - https://groups.google.com/forum/#!topic/v8-users/hsUrt4I2D98
  - https://groups.google.com/forum/#!topic/v8-users/BrmJ7AQIwfc
  - https://codereview.chromium.org/1751873002/
+ - https://www.quora.com/JavaScript-programming-language/Are-Javascript-functions-like-map-reduce-and-filter-already-optimized-for-traversing-array/answer/Quildreen-Motta
