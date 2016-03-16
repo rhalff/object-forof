@@ -21,6 +21,9 @@ d8 --trace-opt-verbose bat/object_keys.js
 
 Links:
 
+ - http://mrale.ph/irhydra/2/
+ - http://v8-io12.appspot.com/index.html
+ - https://github.com/thlorenz/v8-perf/blob/master/performance-profiling.md
  - https://gist.github.com/kevincennis/0cd2138c78a07412ef21
  - https://groups.google.com/forum/#!topic/v8-users/hsUrt4I2D98
  - https://groups.google.com/forum/#!topic/v8-users/BrmJ7AQIwfc
