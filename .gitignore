@@ -4,3 +4,6 @@ bench/data/*.json
 bench/d8/bat/*.js
 dist/
 *.txt
+*.cfg
+*.asm
+*.log
