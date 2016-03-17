@@ -30,3 +30,4 @@ Links:
  - https://codereview.chromium.org/1751873002/
  - https://www.chromium.org/developers/creating-v8-profiling-timeline-plots
  - https://www.quora.com/JavaScript-programming-language/Are-Javascript-functions-like-map-reduce-and-filter-already-optimized-for-traversing-array/answer/Quildreen-Motta
+ - http://mrale.ph/blog/2011/12/18/v8-optimization-checklist.html
