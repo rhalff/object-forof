@@ -70,6 +70,12 @@ test('undefined return is not included', function (t) {
   t.end()
 })
 
+test('one argument will iterate just the keys', function (t) {
+  var ret = forOf((type) => type, obj)
+  t.deepEqual(ret, Object.keys(obj))
+  t.end()
+})
+
 test('filter fun', function (t) {
   var ret = forOf((type, port, val) => ({type: type, val: val}), obj)
     .filter((val) => {
