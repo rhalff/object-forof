@@ -112,5 +112,5 @@ In progress....
 
 ### Download
 
-  * Development version: https://npmcdn.com/object-forof/dist/forOf.js
-  * Minified version: https://npmcdn.com/object-forof/dist/forOf.min.js
+  * Development version: https://unpkg.com/object-forof/dist/forOf.js
+  * Minified version: https://unpkg.com/object-forof/dist/forOf.min.js
