@@ -3,6 +3,7 @@ node_modules
 bench/data/*.json
 bench/d8/bat/*.js
 dist/
+lib/
 *.txt
 *.cfg
 *.asm
