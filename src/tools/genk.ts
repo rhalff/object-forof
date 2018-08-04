@@ -1,6 +1,6 @@
-'use strict'
-
 /*
+Example output:
+
 module.exports = function objk (fn, o0, argLength) {
   var res = []
   var k0 = Object.keys(o0)
@@ -30,20 +30,20 @@ module.exports = function objk (fn, o0, argLength) {
 }
 */
 
-var size = 10
+function gen (length: number = 10) {
+  const alpha = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k']
 
-function gen (length) {
-  var alpha = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k']
-  let head = [
+  const head = [
     'function isObject(o) { return typeof o === \'object\'; }',
-    'module.exports = function objk (fn, o0, argLength) {',
-    '  var res = []'
+    'module.exports = function objk (fn, o0, argLength, res) {'
   ]
 
-  let tail = []
+  const tail = []
+  const kpath = []
+
   let ind1 = '  '
-  let kpath = []
-  for (var i = 0; i < length; i++) {
+
+  for (let i = 0; i < length; i++) {
     const k = `k${i}`
     const o = `o${i}`
     const on = `o${i + 1}`
@@ -73,4 +73,4 @@ function gen (length) {
   ).join('\n')
 }
 
-console.log(gen(size))
+console.log(gen(10))
