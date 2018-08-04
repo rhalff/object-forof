@@ -2,7 +2,7 @@ import * as forOf10 from './10'
 
 export type ForOfFunction = (...args: any[]) => any 
 
-export default function forOf (fn: ForOfFunction, source) {
+export function forOf (fn: ForOfFunction, source) {
   if (typeof fn !== 'function') {
     throw new TypeError('First argument must be a function')
   }

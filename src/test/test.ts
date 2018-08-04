@@ -1,6 +1,6 @@
 import * as fs from 'fs'
 import * as test from 'tape'
-import forOf from '../'
+import { forOf } from '../forOf'
 
 const pkg = JSON.parse(fs.readFileSync('./package.json', 'utf-8'))
 

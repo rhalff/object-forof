@@ -5,7 +5,7 @@ const assert = require('assert')
 const util = require('./util')
 const profiler = require('gc-profiler')
 
-const forOf = require('../index')
+const forOf = require('../lib/index')
 const objectKeys = util.object_keys
 const forIn = util.for_in
 

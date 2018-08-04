@@ -11,10 +11,11 @@
     "bench": "node bench/benchmark > bench/test.dat",
     "bench:plot": "bench/plot.sh | convert - -trim bench/graph.png",
     "bench:graph": "npm run bench && npm run bench:plot",
+    "copy:index": "cp ./src/index.js lib/index.js",
     "copy:10": "cp ./src/10.js lib/10.js",
     "clean": "rimraf lib/",
     "lint": "tslint '*.ts' 'src/**/*.ts' --fix",
-    "prepare": "npm run clean && tsc && npm run copy:10 && npm run test:js",
+    "prepare": "npm run clean && tsc && npm run copy:10 && npm run test:js && npm run copy:index",
     "test": "ts-node src/test/test.ts",
     "test:js": "node lib/test/test.js",
     "prettier": "prettier"
@@ -24,6 +25,7 @@
   "devDependencies": {
     "@types/node": "^10.5.6",
     "faker": "^3.0.1",
+    "gc-profiler": "^1.4.0",
     "performance-now": "^0.2.0",
     "standard": "^6.0.8",
     "tape": "^4.0.0",
