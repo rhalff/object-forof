@@ -29,6 +29,7 @@
     "performance-now": "^0.2.0",
     "standard": "^6.0.8",
     "tape": "^4.0.0",
+    "ts-node": "^7.0.0",
     "tslint": "^5.11.0",
     "tslint-config-prettier": "^1.14.0",
     "tslint-config-standard": "^7.1.0",
